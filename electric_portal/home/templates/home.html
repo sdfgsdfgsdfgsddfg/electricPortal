@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}Electric portal{% endblock %}</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style/min.style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+
+    <meta name = “theme-color” content = “#cccccc”>
+    <meta name = "msapplication-navbutton-color" content = "#cccccc">
+    <meta name = "apple-mobile-web-app-capable" content = "#cccccc">
+    <meta name = "apple-mobile-web-app-status-bar-style" content = "#cccccc">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+  </head>
+  <body>
+    {% block content %}
+    <nav>
+      <button class="btn ibtn" id="menu"><span class="material-symbols-sharp">menu</span></button>
+      <span>العنوان</span>
+      <div class="more-buttons">
+        <button id="searchBtn" class="btn ibtn"><span class="material-symbols-sharp">search</span></button>
+        <button class="btn ibtn"><span class="material-symbols-sharp">translate</span></button>
+      </div>
+      <div class="search-group">
+        <input id="searchInput" type="text" placeholder="البحث">
+        <button class="btn ibtn close-search"><span class="material-symbols-sharp">close</span></button>
+      </div>
+    </nav>
+    <button class="nd"></button>
+    <div class="search-box"></div>
+    <aside>
+      <div>
+        <div class="header">
+          <span style="width:70%;" class="long">عقيل احمد</span>
+          <p>مستشار</p>
+        </div>
+        <div class="items">
+          <button class="btn selected" id="home"><span class="material-symbols-sharp">home</span><p>الصفحة الرئيسية</p></button>
+          <button class="btn" id="addAssay"><span class="material-symbols-sharp">sticky_note_2</span><p>إضافة مقايسة</p></button>
+          <button class="btn" id="settings"><span class="material-symbols-sharp">settings</span><p>الضبط</p></button>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="content">
+        <p class="content-header">المقايسات</p>
+        <div class="list">
+          <p class="list-header">مارس</p>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>1 الأربعاء</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>21 السبت</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>23 الإثنين</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>24 الثلاثاء</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>24 الثلاثاء</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>24 الثلاثاء</span></button>
+          <div class="line"></div>
+          <p class="list-header">فبراير</p>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>1 الأربعاء</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>21 السبت</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>23 الإثنين</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>24 الثلاثاء</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>24 الثلاثاء</span></button>
+          <button class="btn"><p>237868</p><div>عقيل احمد</div><span>24 الثلاثاء</span></button>
+        </div>
+      </div>
+      <div class="add-assay" id="addAssayForm">
+        <div class="add-assay-header">
+          <button class="btn ibtn back-btn"><span class="material-symbols-sharp">close</span></button>
+          <p class="content-header2">إضافة مقايسة</p>
+        </div>
+        <div class="add-assay-content">
+          <p class="form-header">نوع الطلب</p>
+          <div style="float:right;width:100%;">
+            <label class="pure-material-radio m2">
+              <input type="radio" name="group" checked>
+              <span>جديد</span>
+            </label>
+            <label class="pure-material-radio m2">
+              <input type="radio" name="group">
+              <span>مؤقت</span>
+            </label>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p class="form-header">البيانات الأساسية</p>
+          <div class="inputs">
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>رقم المقايسة</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>رقم المهمة</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>نوع التصريح</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>اسم المقاول</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>رقم المغذي</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>نوع الجهد دروب داون</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="text">
+              <label>الموقع</label>
+            </div>
+          </div>
+          <p class="form-header">الصور</p>
+          <div class="inputs">
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>التصاريح</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>نموذج فريق العمل</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>إجتماع ما قبل العمل</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>تقيم المخاطر</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>إجراءات العمل الامن</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>المسعف</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>المكافح</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>المهمة المسندة</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>بطاقة الامن الصناعي</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>بطاقة المستلم</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>بطاقة المصدر</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>الإقامة</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>للمعدات والسائق TUV</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>طفاية الحريق</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>الإسعافات الاولية</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>فريق العمل</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>صور للموقع</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>رقم الإشتراك</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>سعة القاطع</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>سعة العداد</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>عمق الحفرية</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>عرض الحفرية</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>طول الكابل</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>حواجز السلامة</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>النماذج</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>العوائق</label>
+            </div>
+            <div class="material-textfield m2">
+              <input placeholder=" " type="file" accept="image/*" multiple>
+              <label>المخالفات</label>
+            </div>
+            <button class="primary btn" type="submit">حفظ</button>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="add-assay" id="assayForm">
+        <div class="add-assay-header">
+          <button class="btn ibtn back-btn"><span class="material-symbols-sharp">close</span></button>
+          <p class="content-header2" style="margin-top:20px;">237868</p>
+        </div>
+        <div class="add-assay-content">
+          <div class="image-card">
+            <img src="{% static 'img/ERo0YwnXsAElVkj.jpg' %}">
+            <div class="line"></div>
+            <img src="{% static 'img/ERo0YwnXsAElVkj.jpg' %}">
+            <div class="line"></div>
+            <img src="{% static 'img/ERo0YwnXsAElVkj.jpg' %}">
+            <div class="line"></div>
+            <img src="{% static 'img/ERo0YwnXsAElVkj.jpg' %}">
+            <div class="line"></div>
+            <img src="{% static 'img/ERo0YwnXsAElVkj.jpg' %}">
+          </div>
+        </div>
+      </div>
+      <div class="add-assay" id="settingsForm">
+        <div class="add-assay-header">
+          <button class="btn ibtn back-btn"><span class="material-symbols-sharp">close</span></button>
+          <p class="content-header2" style="margin-top:20px;">الضبط</p>
+        </div>
+        <div class="add-assay-content">
+        </div>
+      </div>
+    </main>
+    {% endblock %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.display = 'none';
+  });
+  window.addEventListener('load', function() {
+    document.body.style.display = 'block';
+  });
+      </script>
+    <script src="{% static 'script/jQuery.js' %}"></script>
+    <script src="{% static 'script/script.js' %}"></script>
+  </body>
+</html>
